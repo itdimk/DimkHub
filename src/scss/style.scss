@@ -1,2 +1,59 @@
 ﻿@import "reset";
-@import "shared";
+@import "card";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+.search__input {
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid deepskyblue;
+  border-radius: 1rem;
+  padding: 0.3em 0.7em;
+  width: max(50ch, 90%);
+  display: block;
+  transition: 0.5s background-color ease;
+  background-color: white;
+}
+
+.search__input:focus {
+  background-color: aliceblue;
+}
+
+.search__submit {
+  background-image: url("~/img/search.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  outline: none;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search__submit:hover { 
+  filter: saturate(2);  
+  opacity: 0.8;
+}
