@@ -4,6 +4,10 @@ import {appendCard, clearCards} from "./cards";
 export async function handleSubmit(e) {
     e.preventDefault()
     const repositoryName = this.searchbar.value
+    
+    if(repositoryName.trim().length === 0)
+        alert('Пожалуйста, введите как минимум 1 символ')
+    
     const result = await searchRepository(repositoryName)
     
     clearCards(result.items.length > 0 ? '' : 'Ничего не найдено')
